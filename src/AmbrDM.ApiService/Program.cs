@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
@@ -5,6 +7,8 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+builder.Services.AddAuthentication().AddKeycloakJwtBearer("keycloak", "AmbrDM");
+builder.AddMongoDBClient("mongodb");
 
 var app = builder.Build();
 
