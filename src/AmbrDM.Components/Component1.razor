@@ -1,0 +1,23 @@
+﻿<div class="my-component">
+    This component is defined in the <strong>AmbrDM.Components</strong> library.
+</div>
+
+<CascadingValue Value=this>
+    @ChildContent
+    <div class="card">
+        @if (header != null)
+        {
+            @header.RenderContent
+        }
+    
+        @foreach (var body in bodies)
+        {
+            @body.RenderContent
+        }
+    
+        @if (footer != null)
+        {
+            @footer.RenderContent
+        }
+    </div>
+</CascadingValue>
