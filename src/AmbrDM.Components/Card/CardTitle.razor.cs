@@ -2,7 +2,7 @@
 
 namespace AmbrDM.Components.Card;
 
-public class CardTitle : FlexibleContainerChildElement<ICardBody>
+public partial class CardTitle : FlexibleContainerChildElement<ICardBody>
 {
     protected override void Register(ICardBody parent)
     {

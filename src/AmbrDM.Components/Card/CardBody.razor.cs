@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using AmbrDM.Components.Shared;
+using Microsoft.AspNetCore.Components;
 
 namespace AmbrDM.Components.Card;
 
-public partial class CardBody : ComponentBase
+public partial class CardBody : ChildElement<ICard>
 {
     protected override void Register(ICard parent)
     {
         parent.AddBody(this);
     }
     
-    [Parameter]
-    public RenderFragment ChildContent { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
 
     private CardTitle title;
 

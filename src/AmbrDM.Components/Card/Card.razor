@@ -1,0 +1,21 @@
+﻿<CascadingValue Value=this>
+    @ChildContent
+    
+    <div class="card">
+        @if (header != null)
+        {
+            @header.RenderContent
+        }
+        
+        @foreach (var body in bodies)
+        {
+            @body.RenderContent
+        }
+        
+        @if (footer != null)
+        {
+            @footer.RenderContent
+        }
+    </div>
+    
+</CascadingValue>

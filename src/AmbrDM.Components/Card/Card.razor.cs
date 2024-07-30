@@ -1,9 +1,8 @@
-﻿using AmbrDM.Components.Card;
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 
-namespace AmbrDM.Components;
+namespace AmbrDM.Components.Card;
 
-public partial class Component1
+public partial class Card : ComponentBase
 {
     [Parameter] public RenderFragment ChildContent { get; set; }
 
@@ -14,8 +13,8 @@ public partial class Component1
         bodies.Add(body);
         StateHasChanged();
     }
-    
-    CardHeader header;
+
+    private CardHeader header;
 
     public void SetHeader(CardHeader header)
     {
@@ -35,5 +34,4 @@ public partial class Component1
     {
         StateHasChanged();
     }
-
 }
